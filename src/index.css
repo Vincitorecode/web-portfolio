@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Puedes añadir aquí animaciones personalizadas si quieres */
+body {
+  @apply bg-gray-400 text-white;
+}
