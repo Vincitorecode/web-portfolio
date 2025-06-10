@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
+import Magnet from '../components/Magnet';
+ 
+
 
 const projects = [
   { title: 'Share your work', img: '/assets/thumb1.jpg' },
@@ -29,9 +32,12 @@ const MoreWork = () => {
   return (
     <section className="w-full bg-white py-16 text-black">
       <div className="text-center mb-10">
-        <button className="text-xl border px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
-          More work
-        </button>
+        <Magnet>
+      <button className="text-xl border px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
+        More work
+      </button>
+    </Magnet>
+
       </div>
 
       {/* Primera fila */}
