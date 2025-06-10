@@ -11,6 +11,7 @@ function App() {
       <MoreWork />
       
       <ContactSection />
+     
       <Footer />
     </main>
   );

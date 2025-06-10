@@ -1,13 +1,18 @@
+import SectionTitle from "../components/SectionTitle";
+
 function Contact() {
   return (
-    <section className="py-20 px-6">
-      <h2 className="text-3xl font-bold mb-4">Contact</h2>
-      <p className="text-gray-400 mb-4">Let’s work together — reach out below!</p>
-      <a href="mailto:your@email.com" className="text-blue-500 underline">
-        your@email.com
+    <section className="px-4 py-16 max-w-3xl mx-auto">
+      <SectionTitle>Contact</SectionTitle>
+      <p className="text-gray-300 mb-4">Feel free to reach out!</p>
+      <a
+        href="mailto:vincitore.code@gmail.com"
+        className="underline hover:text-gray-100"
+      >
+        vincitore.code@gmail.com
       </a>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
