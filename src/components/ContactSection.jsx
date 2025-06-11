@@ -1,35 +1,69 @@
-// components/ContactSection.jsx
-import { FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa'
+import SectionTitle from "../components/SectionTitle";
+import ContactModal from './ContactModal';
 
 const ContactSection = () => {
   return (
-    <section className="w-full bg-black text-white py-16 px-4 sm:px-8 md:px-16">
-  {/* Contenedor con flex para alinear texto y botón a la derecha */}
-  <div className="flex flex-col md:flex-row items-center justify-between mb-12">
-    <div className="text-center md:text-left mb-8 md:mb-0">
-      <h2 className="text-3xl font-semibold mb-6">Let’s work together</h2>
-
-      {/* Botón estilo "mail" */}
-      <button className="text-lg border px-6 py-2 rounded-full hover:bg-white hover:text-black transition">
-        vincitore.code@gmail.com
-      </button>
-
-      {/* Teléfono */}
-      <p className="text-lg mt-4">+52 443 681 1900</p>
-    </div>
-
-    {/* Botón circular a la derecha */}
-    <button
-      onClick={() => window.open('/contact', '_blank')}
-      className="w-24 h-24 rounded-full bg-white text-black font-semibold hover:bg-gray-300 transition"
-      aria-label="Get in Touch"
+    <section
+      id="contact"
+      className="w-full min-h-screen bg-black text-white py-20 px-6 sm:px-12 md:px-20 flex flex-col justify-center"
     >
-      Get in Touch
-    </button>
-  </div>
-</section>
+      <SectionTitle>Contact</SectionTitle>
+      <p className="mb-8 text-gray-300 text-center md:text-justify max-w-3xl mx-auto">
+        Feel free to reach out! I’m always open to collaboration or questions.
+      </p>
 
+      <div className="flex flex-col md:flex-row md:justify-between items-center max-w-3xl mx-auto gap-8">
+
+        {/* Contact info */}
+        <div className="space-y-4 text-center md:text-justify">
+          <a
+            href="mailto:vincitore.code@gmail.com"
+            className="flex items-center gap-3 underline hover:text-gray-100 justify-center md:justify-start"
+          >
+            <FaEnvelope /> vincitore.code@gmail.com
+          </a>
+          <a
+            href="tel:+524436811900"
+            className="flex items-center gap-3 underline hover:text-gray-100 justify-center md:justify-start"
+          >
+            <FaPhone /> +52 443 681 1900
+          </a>
+          {/* Redes sociales */}
+          <div className="flex gap-6 mt-4 justify-center md:justify-start text-2xl">
+            <a
+              href="https://linkedin.com/in/vincitorecode"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-gray-100"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://instagram.com/vincitorecode"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="hover:text-gray-100"
+            >
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
+
+        {/* Botón "Get in Touch" */}
+        <ContactModal />
+      </div>
+
+
+      
+
+      
+      
+    
+    </section>
   )
 }
 
-export default ContactSection
+export default ContactSection;
