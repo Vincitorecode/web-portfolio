@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+
 import Magnet from '../components/Magnet';
 import vic from '../assets/vic.jpeg';
 import MY_WEB from '../assets/MY-WEB.PNG';
@@ -17,8 +18,9 @@ const projects = [
 
 const MoreWork = () => {
   const { scrollY } = useScroll();
-  const offsetX = useTransform(scrollY, [0, 1000], [0, 60]);
-  const offsetXReverse = useTransform(scrollY, [0, 1000], [0, -60]);
+  const offsetX = useTransform(scrollY, [0, 2000], [0, 100]);
+const offsetXReverse = useTransform(scrollY, [0, 2000], [0, -100]);
+
 
   return (
     <section className="w-full bg-white py-16 text-black">
