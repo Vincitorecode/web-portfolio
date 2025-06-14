@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import profileImg from "../assets/vic.jpeg";
+import profileImg from "../assets/vic.jpeg"; // Puedes cambiarlo por imagen real de cada proyecto
 
 const projects = [
   { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "#" },
@@ -21,14 +21,19 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative w-full min-h-screen bg-white text-black px-6 md:px-20 py-20"
+      className="relative w-full bg-white text-black px-6 md:px-20 py-24"
       onMouseMove={handleMouseMove}
     >
-      <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight">
-        Selected Work
-      </h2>
+      {/* About Me */}
+      <div className="max-w-3xl mx-auto mb-24 text-center">
+        <h2 className="text-2xl md:text-4xl font-semibold mb-6">About Me</h2>
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          I help companies build and optimize their products by solving real-world problems through design, testing, and development solutions.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      {/* Project List */}
+      <div className="space-y-20">
         {projects.map((project) => (
           <a
             key={project.title}
@@ -37,14 +42,22 @@ export default function Work() {
             rel="noopener noreferrer"
             onMouseEnter={() => setHoveredProject(project)}
             onMouseLeave={() => setHoveredProject(null)}
-            className="block p-6 border border-black rounded-2xl shadow-sm"
+            className="block group"
           >
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-sm">{project.description}</p>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+              <h3 className="text-5xl md:text-6xl font-semibold group-hover:opacity-60 transition duration-300">
+                {project.title}
+              </h3>
+              <p className="mt-4 md:mt-0 text-base md:text-lg text-gray-600">
+                {project.description}
+              </p>
+            </div>
+            <div className="h-[1px] w-full bg-black mt-6" />
           </a>
         ))}
       </div>
 
+      {/* Hover Preview */}
       <AnimatePresence>
         {hoveredProject && (
           <motion.div
@@ -58,7 +71,7 @@ export default function Work() {
               left: mousePos.x + 20,
             }}
           >
-            <div className="relative w-60 h-40 border-4 border-black rounded-lg overflow-hidden shadow-xl bg-white">
+            <div className="relative w-80 h-52 border-32 border-black overflow-hidden shadow-xl bg-white">
               <img
                 src={profileImg}
                 alt="Project preview"
