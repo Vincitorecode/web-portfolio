@@ -8,10 +8,8 @@ import qaImg from "../assets/qa.PNG";
 
 const projects = [
   { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "https://github.com/Vincitorecode/ecommerce-qa-automation" , thumbnail: qaImg },
-  
-  
-  { title: "other work here", description: "Personal portfolio", link: "#"},
-  { title: "Security Audit Dashboard", description: "Dashboard prototype", link: "#" },
+  { title: "other work here", description: "other descrip", link: "#"},
+  { title: "...", description: "...", link: "#" },
 ];
 
 export default function Work() {
