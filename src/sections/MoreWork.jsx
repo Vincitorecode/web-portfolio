@@ -2,9 +2,10 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Magnet from '../components/Magnet';
 import vic from '../assets/vic.jpeg';
+import MY_WEB from '../assets/MY-WEB.PNG';
 
 const projects = [
-  { title: 'Share your work', img: vic },
+  { title: 'Share your work', img: MY_WEB },
   { title: 'Powertrain Timeline', img: vic },
   { title: 'bestsmile Aligner', img: vic },
   { title: 'Mobile World', img: vic },

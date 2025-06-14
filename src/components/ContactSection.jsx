@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import profileImg from '../assets/vic.jpeg';
 import Magnet from '../components/Magnet';
-import ContactModal from '../components/ContactModal'; // ajusta si está en otro folder
+import ContactModal from '../components/ContactModal'; 
 
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);

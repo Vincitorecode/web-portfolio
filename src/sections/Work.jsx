@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import profileImg from "../assets/vic.jpeg"; // Puedes cambiarlo por imagen real de cada proyecto
+import profileImg from "../assets/vic.jpeg"; 
+import myWebImg from "../assets/MY-WEB.PNG";
+import qaImg from "../assets/qa.PNG";
+
+
 
 const projects = [
-  { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "#" },
-  { title: "QA Tester Assessment", description: "Technical test project", link: "#" },
-  { title: "Fuzzer", description: "A custom fuzzer for testing", link: "#" },
-  { title: "Portfolio Website", description: "Personal portfolio", link: "#" },
+  { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "https://github.com/Vincitorecode/ecommerce-qa-automation" , thumbnail: qaImg },
+  
+  
+  { title: "Portfolio Website", description: "Personal portfolio", link: "#", thumbnail: myWebImg },
   { title: "Security Audit Dashboard", description: "Dashboard prototype", link: "#" },
 ];
 
@@ -71,12 +75,13 @@ export default function Work() {
               left: mousePos.x + 20,
             }}
           >
-            <div className="relative w-80 h-52 border-32 border-black overflow-hidden shadow-xl bg-white">
+            <div className="relative w-80 h-52 border-16 border-black overflow-hidden shadow-xl bg-white">
               <img
-                src={profileImg}
-                alt="Project preview"
-                className="w-full h-full object-cover"
-              />
+                    src={hoveredProject?.thumbnail || profileImg }
+                    alt="Project preview"
+                    className="w-full h-full object-cover"
+                  />
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-sm font-medium">
                   View
