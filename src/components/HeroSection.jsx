@@ -8,18 +8,18 @@ function HeroSection() {
     <section className="hero-section">
       <div className="hero-content">
         <div className="hero-text-overlay">
-          <h1 className="hero-name">Dennis Snellenberg</h1>
+          <h1 className="hero-name">Vic</h1>
         </div>
-        <img src={dennisImage} alt="Dennis Snellenberg" className="hero-image" />
+        <img src={dennisImage} alt="Vic" className="hero-image" />
 
         <div className="location-badge">
-          <p>Located in the Netherlands</p>
+          <p>Mexico</p>
           <div className="globe-icon"></div> {/* You'd replace this with an actual SVG or icon */}
         </div>
 
         <div className="freelance-info">
           <p>Freelance</p>
-          <p>Designer & Developer</p>
+          <p></p>
         </div>
 
         <div className="arrow-icon"></div> {/* Replace with actual SVG or icon */}
