@@ -10,7 +10,7 @@ const projects = [
   { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "https://github.com/Vincitorecode/ecommerce-qa-automation" , thumbnail: qaImg },
   
   
-  { title: "Portfolio Website", description: "Personal portfolio", link: "#", thumbnail: myWebImg },
+  { title: "other work here", description: "Personal portfolio", link: "#"},
   { title: "Security Audit Dashboard", description: "Dashboard prototype", link: "#" },
 ];
 
