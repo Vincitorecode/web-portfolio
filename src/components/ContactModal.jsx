@@ -34,43 +34,39 @@ function ContactModal({ isOpen, onClose }) {
             method="POST"
             className="space-y-4 sm:space-y-5"
           >
+            {/* disable captcha */}
             <input type="hidden" name="_captcha" value="false" />
+            {/* optional: redirect after submit */}
+            {/* <input type="hidden" name="_next" value="https://tusitio.com/gracias.html" /> */}
+
             <input
-              type="hidden"
-              name="_next"
-              value="https://vincitorecode.github.io/gracias.html"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
             />
-
-
-              <input
-                type="text"
-                name="name"
-                placeholder="Your name"
-                required
-                className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-                className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Your message"
-                required
-                className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 resize-none focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button
-                type="submit"
-                className="w-full border border-white text-white font-semibold py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
-              >
-                Send Message
-              </button>
-            </form>
-
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+              className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your message"
+              required
+              className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 resize-none focus:outline-none focus:ring-2 focus:ring-white"
+            />
+            <button
+              type="submit"
+              className="w-full border border-white text-white font-semibold py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </>
