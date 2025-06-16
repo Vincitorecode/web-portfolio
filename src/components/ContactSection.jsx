@@ -56,7 +56,7 @@ export default function ContactSection() {
               
               <a href="https://instagram.com/vincitorecode" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href="https://twitter.com/vincitorecode" target="_blank" rel="noopener noreferrer">Twitter</a>
-              <a href="https://linkedin.com/in/vincitorecode" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/victor-code/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
