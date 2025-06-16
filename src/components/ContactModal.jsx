@@ -1,12 +1,6 @@
 import { useState } from "react";
 
 function ContactModal({ isOpen, onClose }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message sent!");
-    onClose();
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -35,35 +29,48 @@ function ContactModal({ isOpen, onClose }) {
           </h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+          <form
+            action="https://formsubmit.co/vincitore.code@gmail.com"
+            method="POST"
+            className="space-y-4 sm:space-y-5"
+          >
+            <input type="hidden" name="_captcha" value="false" />
             <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              required
-              className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
+              type="hidden"
+              name="_next"
+              value="https://vincitorecode.github.io/gracias.html"
             />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your email"
-              required
-              className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Your message"
-              required
-              className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 resize-none focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button
-              type="submit"
-              className="w-full border border-white text-white font-semibold py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
-            >
-              Send Message
-            </button>
-          </form>
+
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+                className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+                className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Your message"
+                required
+                className="w-full p-3 rounded-lg bg-zinc-900 text-white border border-zinc-700 resize-none focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              <button
+                type="submit"
+                className="w-full border border-white text-white font-semibold py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+
         </div>
       </div>
     </>
@@ -71,3 +78,4 @@ function ContactModal({ isOpen, onClose }) {
 }
 
 export default ContactModal;
+
