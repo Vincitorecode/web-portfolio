@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Magnet from '../components/Magnet';
 import vic from '../assets/vic.jpeg';
 import MY_WEB from '../assets/MY-WEB.PNG';
+import soon from '../assets/soon.png';
 
 const projects = [
   { title: 'Share your work', img: MY_WEB },
