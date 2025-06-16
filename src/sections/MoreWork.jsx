@@ -7,7 +7,7 @@ import MY_WEB from '../assets/MY-WEB.PNG';
 import soon from '../assets/soon.png';
 
 const projects = [
-  { title: 'Share your work', img: MY_WEB },
+  { title: 'Share your work', img: vic },
   { title: 'Powertrain Timeline', img: vic },
   { title: 'bestsmile Aligner', img: vic },
   { title: 'Mobile World', img: vic },

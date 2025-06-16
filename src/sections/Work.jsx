@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import profileImg from "../assets/vic.jpeg"; 
 import myWebImg from "../assets/MY-WEB.PNG";
 import qaImg from "../assets/qa.PNG";
+import fuzzer from "../assets/fuzzer.png"; 
 
 
 
 const projects = [
   { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "https://github.com/Vincitorecode/ecommerce-qa-automation" , thumbnail: qaImg },
-  { title: "FUZZER", description: "Scanner network", link: "#"},
+  { title: "FUZZER", description: "Scanner network", link: "https://github.com/Vincitorecode/network-fuzzer", thumbnail: fuzzer },
   { title: "...", description: "...", link: "#" },
 ];
 
