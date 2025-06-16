@@ -8,7 +8,7 @@ export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="w-full h-screen bg-black text-white flex items-center justify-center px-6 sm:px-12 relative overflow-hidden">
+    <section id="contact" className="w-full h-screen bg-black text-white flex items-center justify-center px-6 sm:px-12 relative overflow-hidden">
       <div className="flex flex-col md:flex-row md:items-center md:justify-center w-full gap-6">
 
         {/* Columna izquierda */}
@@ -19,24 +19,24 @@ export default function ContactSection() {
             className="w-20 h-20 rounded-full mb-0 object-cover"
           />
           <div className="flex flex-col gap-2 sm:gap-4">
-  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-    <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
-      Let’s work
-    </h2>
-    <Magnet magnetStrength={2} padding={100}>
-      <button
-        onClick={() => setIsModalOpen(true)}
-        className="bg-blue-600 text-white w-32 h-32 sm:w-40 sm:h-40 rounded-full flex items-center justify-center text-base md:text-lg font-semibold shadow-xl"
-      >
-        Get in touch
-      </button>
-    </Magnet>
-  </div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
+                  Let’s work
+                </h2>
+                <Magnet magnetStrength={2} padding={100}>
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="bg-blue-600 text-white w-32 h-32 sm:w-40 sm:h-40 rounded-full flex items-center justify-center text-base md:text-lg font-semibold shadow-xl"
+                  >
+                    Get in touch
+                  </button>
+                </Magnet>
+              </div>
 
-  <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
-    together
-  </h2>
-</div>
+                <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
+                  together
+                </h2>
+              </div>
 
           <div className="w-full h-px bg-white/10 my-8"></div>
 

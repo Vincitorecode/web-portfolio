@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import profileImg from "../assets/vic.jpeg"; 
 import myWebImg from "../assets/MY-WEB.PNG";
 import qaImg from "../assets/qa.PNG";
 import fuzzer from "../assets/fuzzer.png"; 
-
-
 
 const projects = [
   { title: "Ecommerce QA Automation", description: "End-to-end automated tests", link: "https://github.com/Vincitorecode/ecommerce-qa-automation" , thumbnail: qaImg },
@@ -21,19 +20,41 @@ export default function Work() {
     setMousePos({ x: e.clientX, y: e.clientY });
   };
 
+  // 👇 Efecto scroll "About Me"
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [inView, controls]);
+
+  const aboutVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
     <section
       id="work"
       className="relative w-full bg-white text-black px-6 md:px-20 py-24"
       onMouseMove={handleMouseMove}
     >
-      {/* About Me */}
-      <div className="max-w-3xl mx-auto mb-24 text-center">
+      {/* About Me con animación */}
+      <motion.div
+        id="about"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={aboutVariants}
+        className="max-w-3xl mx-auto mb-24 text-center"
+      >
         <h2 className="text-2xl md:text-4xl font-semibold mb-6">About Me</h2>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
           I help companies build and optimize their products by solving real-world problems through design, testing, and development solutions.
         </p>
-      </div>
+      </motion.div>
 
       {/* Project List */}
       <div className="space-y-20">
@@ -76,11 +97,10 @@ export default function Work() {
           >
             <div className="relative w-80 h-52 border-16 border-black overflow-hidden shadow-xl bg-white">
               <img
-                    src={hoveredProject?.thumbnail || profileImg }
-                    alt="Project preview"
-                    className="w-full h-full object-cover"
-                  />
-
+                src={hoveredProject?.thumbnail || profileImg}
+                alt="Project preview"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-sm font-medium">
                   View
