@@ -7,6 +7,10 @@ import ContactModal from '../components/ContactModal';
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+
+
+
+  
   return (
     <section id="contact" className="w-full h-screen bg-black text-white flex items-center justify-center px-6 sm:px-12 relative overflow-hidden">
       <div className="flex flex-col md:flex-row md:items-center md:justify-center w-full gap-6">

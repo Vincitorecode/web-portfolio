@@ -38,7 +38,7 @@ function ContactModal({ isOpen, onClose }) {
             <input type="hidden" name="_captcha" value="false" />
             {/* optional: redirect after submit */}
             {/* <input type="hidden" name="_next" value="https://tusitio.com/gracias.html" /> */}
-
+            
             <input
               type="text"
               name="name"
