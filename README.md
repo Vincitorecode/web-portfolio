@@ -1,12 +1,26 @@
-# React + Vite
+# 🌐 My Web Portfolio — Vincitore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website built with **React**, **Tailwind CSS**, and **Framer Motion**. This Single Page Application (SPA) is designed to be **elegant, responsive**, and **smoothly animated** to showcase my skills in **Cybersecurity, Quality Assurance (QA), and Software Development**.
 
-Currently, two official plugins are available:
+## 🎯 Project Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🧑‍💻 Present my professional profile in a clean and modern design
+- 📱 Fully responsive layout for desktop and mobile
+- 🎞️ Smooth animations for a pleasant user experience
+- 🧪 Automated QA tests for core features (navigation, visibility, responsiveness)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Tech Stack
+
+| Tech             | Description                             |
+|------------------|-----------------------------------------|
+| React            | Front-end JavaScript library            |
+| Tailwind CSS     | Utility-first CSS framework             |
+| Framer Motion    | Library for animations in React         |
+| React Icons      | Icons used throughout the site          |
+| Vite             | Fast front-end tooling                  |
+| GitHub Pages     | Hosting for the live website            |
+| Selenium + PyTest| For automated UI testing (navigation)  |
+
+---
