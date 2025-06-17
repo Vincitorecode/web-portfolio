@@ -1,4 +1,4 @@
-// src/sections/Hero.jsx
+
 import React from 'react';
 import { Globe } from 'lucide-react';
 import { motion } from 'framer-motion';

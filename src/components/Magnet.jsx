@@ -1,4 +1,4 @@
-// src/components/Magnet.jsx
+
 import { useState, useEffect, useRef } from "react";
 
 const Magnet = ({

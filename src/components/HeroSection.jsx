@@ -1,7 +1,7 @@
-// src/components/HeroSection.jsx
+
 import React from 'react';
-import './HeroSection.css'; // Or HeroSection.module.css
-import dennisImage from '../assets/dennis-snellenberg.jpg'; // Assuming you have the image in src/assets
+import './HeroSection.css'; 
+import dennisImage from '../assets/dennis-snellenberg.jpg'; 
 
 function HeroSection() {
   return (
@@ -14,7 +14,7 @@ function HeroSection() {
 
         <div className="location-badge">
           <p>Mexico</p>
-          <div className="globe-icon"></div> {/* You'd replace this with an actual SVG or icon */}
+          <div className="globe-icon"></div> 
         </div>
 
         <div className="freelance-info">
@@ -22,7 +22,7 @@ function HeroSection() {
           <p></p>
         </div>
 
-        <div className="arrow-icon"></div> {/* Replace with actual SVG or icon */}
+        <div className="arrow-icon"></div> 
       </div>
     </section>
   );
